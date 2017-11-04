@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Begin VB.Form Form5 
    BackColor       =   &H00000080&
    Caption         =   "Form5"
@@ -11,6 +12,52 @@ Begin VB.Form Form5
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
+   Begin MSAdodcLib.Adodc logstu 
+      Height          =   495
+      Left            =   6600
+      Top             =   7800
+      Width           =   2415
+      _ExtentX        =   4260
+      _ExtentY        =   873
+      ConnectMode     =   0
+      CursorLocation  =   3
+      IsolationLevel  =   -1
+      ConnectionTimeout=   15
+      CommandTimeout  =   30
+      CursorType      =   3
+      LockType        =   3
+      CommandType     =   1
+      CursorOptions   =   0
+      CacheSize       =   50
+      MaxRecords      =   0
+      BOFAction       =   0
+      EOFAction       =   0
+      ConnectStringType=   1
+      Appearance      =   1
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      Orientation     =   0
+      Enabled         =   -1
+      Connect         =   "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\abhisek\Desktop\VB6 project\Database2.mdb;Persist Security Info=False"
+      OLEDBString     =   "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\abhisek\Desktop\VB6 project\Database2.mdb;Persist Security Info=False"
+      OLEDBFile       =   ""
+      DataSourceName  =   ""
+      OtherAttributes =   ""
+      UserName        =   ""
+      Password        =   ""
+      RecordSource    =   "select * from STUDENT1"
+      Caption         =   "Adodc1"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      _Version        =   393216
+   End
    Begin VB.CommandButton Command2 
       Appearance      =   0  'Flat
       BackColor       =   &H000000FF&
@@ -137,8 +184,30 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Public imp2_name As String
+
+Private Sub Command1_Click()
+logstu.RecordSource = "select * from STUDENT1 where username='" + Text1.Text + "' and password='" + Text2.Text + "'"
+logstu.Refresh
+If logstu.Recordset.EOF Then
+MsgBox "login failed.. check credentials", vbCritical
+Else
+MsgBox "login successfull"
+imp2_name = Text1.Text
+Form8.Show
+Unload Me
+
+
+
+End If
+
+
+
+End Sub
+
 Private Sub Command2_Click()
 Form7.Show
 Unload Me
 
 End Sub
+

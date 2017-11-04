@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Begin VB.Form Form8 
    BackColor       =   &H00000080&
    Caption         =   "Form8"
@@ -11,6 +12,52 @@ Begin VB.Form Form8
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
+   Begin MSAdodcLib.Adodc Adodc1 
+      Height          =   615
+      Left            =   12720
+      Top             =   4200
+      Width           =   1935
+      _ExtentX        =   3413
+      _ExtentY        =   1085
+      ConnectMode     =   0
+      CursorLocation  =   3
+      IsolationLevel  =   -1
+      ConnectionTimeout=   15
+      CommandTimeout  =   30
+      CursorType      =   3
+      LockType        =   3
+      CommandType     =   1
+      CursorOptions   =   0
+      CacheSize       =   50
+      MaxRecords      =   0
+      BOFAction       =   0
+      EOFAction       =   0
+      ConnectStringType=   1
+      Appearance      =   1
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      Orientation     =   0
+      Enabled         =   -1
+      Connect         =   "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\abhisek\Desktop\VB6 project\Database2.mdb;Persist Security Info=False"
+      OLEDBString     =   "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\abhisek\Desktop\VB6 project\Database2.mdb;Persist Security Info=False"
+      OLEDBFile       =   ""
+      DataSourceName  =   ""
+      OtherAttributes =   ""
+      UserName        =   ""
+      Password        =   ""
+      RecordSource    =   "select * from STUDENT1"
+      Caption         =   "Adodc1"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      _Version        =   393216
+   End
    Begin VB.CommandButton Command3 
       BackColor       =   &H000000FF&
       Caption         =   "LOG OUT"
@@ -112,6 +159,8 @@ Begin VB.Form Form8
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
       Caption         =   "Label14"
+      DataField       =   "gender"
+      DataSource      =   "Adodc1"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -131,7 +180,7 @@ Begin VB.Form Form8
    Begin VB.Label Label13 
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
-      Caption         =   "Label13"
+      Caption         =   "GENDER"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -152,6 +201,8 @@ Begin VB.Form Form8
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
       Caption         =   "Label12"
+      DataField       =   "address"
+      DataSource      =   "Adodc1"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -171,7 +222,7 @@ Begin VB.Form Form8
    Begin VB.Label Label11 
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
-      Caption         =   "Label11"
+      Caption         =   "ADDRESS"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -192,6 +243,8 @@ Begin VB.Form Form8
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
       Caption         =   "Label10"
+      DataField       =   "phone_number"
+      DataSource      =   "Adodc1"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -211,7 +264,7 @@ Begin VB.Form Form8
    Begin VB.Label Label9 
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
-      Caption         =   "Label9"
+      Caption         =   "PHONE NUMBER"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -232,6 +285,8 @@ Begin VB.Form Form8
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
       Caption         =   "Label8"
+      DataField       =   "username"
+      DataSource      =   "Adodc1"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -251,7 +306,7 @@ Begin VB.Form Form8
    Begin VB.Label Label7 
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
-      Caption         =   "Label7"
+      Caption         =   "USER NAME"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -272,6 +327,8 @@ Begin VB.Form Form8
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
       Caption         =   "Label6"
+      DataField       =   "roll_no"
+      DataSource      =   "Adodc1"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -291,7 +348,7 @@ Begin VB.Form Form8
    Begin VB.Label Label5 
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
-      Caption         =   "Label5"
+      Caption         =   "ROLL NUMBER"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -312,6 +369,8 @@ Begin VB.Form Form8
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
       Caption         =   "Label4"
+      DataField       =   "student_name"
+      DataSource      =   "Adodc1"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -331,7 +390,7 @@ Begin VB.Form Form8
    Begin VB.Label Label3 
       Alignment       =   2  'Center
       BackColor       =   &H00000080&
-      Caption         =   "Label3"
+      Caption         =   "NAME"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -351,6 +410,8 @@ Begin VB.Form Form8
    Begin VB.Label Label2 
       BackColor       =   &H00000080&
       Caption         =   "Label2"
+      DataField       =   "student_name"
+      DataSource      =   "Adodc1"
       BeginProperty Font 
          Name            =   "Arial Black"
          Size            =   14.25
@@ -397,5 +458,15 @@ Private Sub Command3_Click()
 Form9.Show
 MsgBox "LOGOUT SUCCESSFULL"
 Unload Me
+
+End Sub
+
+Private Sub Form_Load()
+Adodc1.RecordSource = "select * from STUDENT1 where username='" + Form5.imp2_name + "'"
+Adodc1.Refresh
+
+If Adodc1.Recordset.EOF Then
+MsgBox "not found"
+End If
 
 End Sub

@@ -12,15 +12,21 @@ Begin VB.Form Form7
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
-   Begin VB.ComboBox Combo1 
-      Height          =   315
-      ItemData        =   "Form7.frx":0000
+   Begin VB.OptionButton Option2 
+      Caption         =   "FEMALE"
+      Height          =   255
+      Left            =   12240
+      TabIndex        =   15
+      Top             =   5400
+      Width           =   1575
+   End
+   Begin VB.OptionButton Option1 
+      Caption         =   "MALE"
+      Height          =   255
       Left            =   10200
-      List            =   "Form7.frx":000A
       TabIndex        =   14
-      Text            =   "---GENDER---"
-      Top             =   5280
-      Width           =   3975
+      Top             =   5400
+      Width           =   1575
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   375
@@ -55,7 +61,7 @@ Begin VB.Form Form7
       OtherAttributes =   ""
       UserName        =   ""
       Password        =   ""
-      RecordSource    =   "STUDENT"
+      RecordSource    =   "STUDENT1"
       Caption         =   "Adodc1"
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "MS Sans Serif"
@@ -115,7 +121,7 @@ Begin VB.Form Form7
       Width           =   4095
    End
    Begin VB.TextBox Text2 
-      DataField       =   "user_name"
+      DataField       =   "username"
       DataSource      =   "Adodc1"
       Height          =   735
       Left            =   10080
@@ -282,17 +288,37 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
 Adodc1.Recordset.Fields("student_name") = Text1.Text
-Adodc1.Recordset.Fields("user_name") = Text2.Text
+Adodc1.Recordset.Fields("username") = Text2.Text
 Adodc1.Recordset.Fields("password") = Text3.Text
-Adodc1.Recordset.Fields("gender") = Combo1.Text
+If Option1 = True Then
+Adodc1.Recordset.Fields("gender") = Option1.Caption
+Else
+Adodc1.Recordset.Fields("gender") = Option2.Caption
+End If
+
+
 
 
 Adodc1.Recordset.Fields("phone_number") = Text5.Text
 Adodc1.Recordset.Fields("address") = Text6.Text
-
+If Text1.Text = "" Then
+MsgBox "NAME FIELD CANNOT BE EMPTY", vbCritical
+ElseIf Text2.Text = "" Then
+MsgBox "USER NAME FIELD CANNOT BE EMPTY", vbCritical
+ElseIf Text3.Text = "" Then
+MsgBox "PASSWORD CANNOT BE EMPTY"
+ElseIf Option1 <> True And Option2 <> True Then
+MsgBox "PLEASE ENTER A GENDER"
+ElseIf Len(Text5.Text) <> 10 Or Not IsNumeric(Text5.Text) Then
+MsgBox "PLEASE ENTER A VALID PHONE NUMBER"
+ElseIf Text6.Text = "" Then
+MsgBox "PLEASE ENTER A VALID ADDRESS"
+Else
 Adodc1.Recordset.Update
-
 MsgBox "registration successfull", vbInformation
+Form5.Show
+Unload Me
+End If
 
 
 
@@ -309,6 +335,15 @@ MsgBox "registration successfull", vbInformation
 
 
 
+
+
+
+
+End Sub
+
+Private Sub Command2_Click()
+Form9.Show
+Unload Me
 
 End Sub
 
