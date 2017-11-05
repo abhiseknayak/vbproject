@@ -92,7 +92,7 @@ Private Sub Command1_Click()
 If Text1.Text = "hello_world" Then
 Unload Me
 
-Form7.Show
+Form14.Show
 End If
 
 
