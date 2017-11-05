@@ -1,6 +1,8 @@
 VERSION 5.00
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form Form4 
+   BackColor       =   &H00000080&
    Caption         =   "Form4"
    ClientHeight    =   3015
    ClientLeft      =   120
@@ -11,13 +13,46 @@ Begin VB.Form Form4
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
+   Begin MSComDlg.CommonDialog CommonDialog1 
+      Left            =   1560
+      Top             =   5760
+      _ExtentX        =   847
+      _ExtentY        =   847
+      _Version        =   393216
+   End
+   Begin VB.CommandButton Command1 
+      Caption         =   "UPLOAD"
+      BeginProperty Font 
+         Name            =   "Arial Narrow"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Left            =   840
+      TabIndex        =   18
+      Top             =   4800
+      Width           =   2295
+   End
+   Begin VB.PictureBox Picture1 
+      Height          =   2295
+      Left            =   600
+      ScaleHeight     =   2235
+      ScaleWidth      =   2715
+      TabIndex        =   17
+      Top             =   2040
+      Width           =   2775
+   End
    Begin VB.ComboBox Combo1 
       DataField       =   "subject_alloted"
       DataSource      =   "Adodc1"
       Height          =   315
       ItemData        =   "Form4.frx":0000
       Left            =   7200
-      List            =   "Form4.frx":0016
+      List            =   "Form4.frx":000D
       TabIndex        =   16
       Text            =   "Combo1"
       Top             =   4680
@@ -70,17 +105,21 @@ Begin VB.Form Form4
       _Version        =   393216
    End
    Begin VB.CommandButton Command2 
+      BackColor       =   &H000080FF&
       Caption         =   "CANCEL"
       Height          =   735
       Left            =   8400
+      Style           =   1  'Graphical
       TabIndex        =   15
       Top             =   9120
       Width           =   1815
    End
    Begin VB.CommandButton regidterbtn 
+      BackColor       =   &H0000FF00&
       Caption         =   "REGISTER"
       Height          =   735
       Left            =   5040
+      Style           =   1  'Graphical
       TabIndex        =   14
       Top             =   9120
       Width           =   2055
@@ -146,7 +185,10 @@ Begin VB.Form Form4
       Width           =   6375
    End
    Begin VB.Label Label8 
+      Alignment       =   2  'Center
+      BackColor       =   &H00000080&
       Caption         =   "ADDRESS"
+      ForeColor       =   &H8000000B&
       Height          =   615
       Left            =   4320
       TabIndex        =   13
@@ -154,7 +196,10 @@ Begin VB.Form Form4
       Width           =   2055
    End
    Begin VB.Label Label7 
+      Alignment       =   2  'Center
+      BackColor       =   &H00000080&
       Caption         =   "PHONE NUMBER"
+      ForeColor       =   &H8000000B&
       Height          =   615
       Left            =   4320
       TabIndex        =   12
@@ -162,7 +207,10 @@ Begin VB.Form Form4
       Width           =   2175
    End
    Begin VB.Label Label6 
+      Alignment       =   2  'Center
+      BackColor       =   &H00000080&
       Caption         =   "QUALIFICATION"
+      ForeColor       =   &H8000000B&
       Height          =   615
       Left            =   4320
       TabIndex        =   9
@@ -170,7 +218,10 @@ Begin VB.Form Form4
       Width           =   2055
    End
    Begin VB.Label Label5 
+      Alignment       =   2  'Center
+      BackColor       =   &H00000080&
       Caption         =   "SUBJECT ALLOTED"
+      ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   4320
       TabIndex        =   8
@@ -178,7 +229,10 @@ Begin VB.Form Form4
       Width           =   1935
    End
    Begin VB.Label Label4 
+      Alignment       =   2  'Center
+      BackColor       =   &H00000080&
       Caption         =   "PASSWORD"
+      ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   4320
       TabIndex        =   7
@@ -186,7 +240,10 @@ Begin VB.Form Form4
       Width           =   1815
    End
    Begin VB.Label Label3 
+      Alignment       =   2  'Center
+      BackColor       =   &H00000080&
       Caption         =   "USER NAME"
+      ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   4320
       TabIndex        =   6
@@ -194,7 +251,10 @@ Begin VB.Form Form4
       Width           =   1815
    End
    Begin VB.Label Label2 
+      Alignment       =   2  'Center
+      BackColor       =   &H00000080&
       Caption         =   "NAME"
+      ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   4320
       TabIndex        =   5
@@ -202,6 +262,7 @@ Begin VB.Form Form4
       Width           =   1935
    End
    Begin VB.Label Label1 
+      BackColor       =   &H00000080&
       Caption         =   "TEACHER REGISTRATION"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
@@ -212,6 +273,7 @@ Begin VB.Form Form4
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
+      ForeColor       =   &H8000000B&
       Height          =   735
       Left            =   7200
       TabIndex        =   0
@@ -226,9 +288,25 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
 
+Dim str As String
+
+Private Sub Command1_Click()
+CommonDialog1.ShowOpen
+CommonDialog1.Filter = "jpeg|*.jpg"
+str = CommonDialog1.FileName
+Picture1.Picture = LoadPicture(str)
+End Sub
+
+Private Sub Command2_Click()
+Form3.Show
+Unload Me
+
+End Sub
+
 Private Sub Form_Load()
 Adodc1.Recordset.AddNew
 End Sub
+
 
 Private Sub regidterbtn_Click()
 Adodc1.Recordset.Fields("teacher_name") = txtname.Text
@@ -238,10 +316,14 @@ Adodc1.Recordset.Fields("subject_alloted") = Combo1.Text
 Adodc1.Recordset.Fields("qualification") = txtqual.Text
 Adodc1.Recordset.Fields("phone number") = txtphone.Text
 Adodc1.Recordset.Fields("address") = txtaddress.Text
+Adodc1.Recordset.Fields("photo") = str
+
 If txtname.Text = "" Then
 MsgBox "NAME field cannot be empty"
 ElseIf txtusername.Text = "" Then
 MsgBox "USERNAME field cannot be empty"
+ElseIf Not Picture1.Picture Then
+MsgBox "PLEASE UPLOAD A PICTURE"
 ElseIf Len(txtpassword.Text) < 8 Then
 MsgBox "PASSWORD should be atleast 8 characters long"
 ElseIf Combo1.Text = "" Then

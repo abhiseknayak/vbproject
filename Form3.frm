@@ -12,6 +12,25 @@ Begin VB.Form Form3
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
+   Begin VB.CommandButton Command3 
+      BackColor       =   &H00FFFF00&
+      Caption         =   "BACK"
+      BeginProperty Font 
+         Name            =   "Arial Narrow"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Left            =   9600
+      Style           =   1  'Graphical
+      TabIndex        =   7
+      Top             =   8880
+      Width           =   1935
+   End
    Begin MSAdodcLib.Adodc loginado 
       Height          =   375
       Left            =   9240
@@ -132,7 +151,9 @@ Begin VB.Form Form3
          Strikethrough   =   0   'False
       EndProperty
       Height          =   615
+      IMEMode         =   3  'DISABLE
       Left            =   8040
+      PasswordChar    =   "*"
       TabIndex        =   0
       Text            =   "ENTER PASSWORD"
       Top             =   5880
@@ -143,12 +164,12 @@ Begin VB.Form Form3
       BackColor       =   &H00000080&
       Caption         =   "WELCOME TO TEACHER LOGIN"
       BeginProperty Font 
-         Name            =   "Monotype Corsiva"
+         Name            =   "Arial Black"
          Size            =   20.25
          Charset         =   0
-         Weight          =   700
+         Weight          =   900
          Underline       =   0   'False
-         Italic          =   -1  'True
+         Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H8000000B&

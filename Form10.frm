@@ -1,5 +1,6 @@
 VERSION 5.00
 Begin VB.Form Form10 
+   BackColor       =   &H00000080&
    Caption         =   "Form10"
    ClientHeight    =   3015
    ClientLeft      =   120
@@ -9,47 +10,78 @@ Begin VB.Form Form10
    ScaleHeight     =   3015
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
+   WindowState     =   2  'Maximized
+   Begin VB.CommandButton Command6 
+      BackColor       =   &H00FFFF00&
+      Caption         =   "BACK TO PROFILE"
+      BeginProperty Font 
+         Name            =   "Arial Narrow"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Left            =   16440
+      Style           =   1  'Graphical
+      TabIndex        =   26
+      Top             =   1920
+      Width           =   2055
+   End
    Begin VB.CommandButton Command5 
+      BackColor       =   &H0000FFFF&
       Caption         =   "FIRST STUDENT"
       Height          =   615
-      Left            =   13800
+      Left            =   13680
+      Style           =   1  'Graphical
       TabIndex        =   25
       Top             =   8040
       Width           =   2295
    End
    Begin VB.CommandButton Command3 
+      BackColor       =   &H0000FFFF&
       Caption         =   "LAST STUDENT"
       Height          =   615
-      Left            =   3480
+      Left            =   1680
+      Style           =   1  'Graphical
       TabIndex        =   24
       Top             =   8040
       Width           =   2175
    End
    Begin VB.CommandButton Command4 
+      BackColor       =   &H000000FF&
       Caption         =   "BACK"
       Height          =   615
-      Left            =   8640
+      Left            =   7920
+      Style           =   1  'Graphical
       TabIndex        =   23
       Top             =   8040
       Width           =   2175
    End
    Begin VB.CommandButton Command2 
+      BackColor       =   &H0000FF00&
       Caption         =   "NEXT"
       Height          =   615
-      Left            =   11280
+      Left            =   10800
+      Style           =   1  'Graphical
       TabIndex        =   11
       Top             =   8040
       Width           =   2055
    End
    Begin VB.CommandButton Command1 
+      BackColor       =   &H0000FF00&
       Caption         =   "UPDATE"
       Height          =   615
-      Left            =   6000
+      Left            =   4800
+      Style           =   1  'Graphical
       TabIndex        =   10
       Top             =   8040
       Width           =   2295
    End
    Begin VB.TextBox Text8 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   12000
       TabIndex        =   9
@@ -58,6 +90,7 @@ Begin VB.Form Form10
       Width           =   3255
    End
    Begin VB.TextBox Text7 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   12000
       TabIndex        =   8
@@ -66,6 +99,7 @@ Begin VB.Form Form10
       Width           =   3135
    End
    Begin VB.TextBox Text6 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   7080
       TabIndex        =   7
@@ -74,6 +108,7 @@ Begin VB.Form Form10
       Width           =   3135
    End
    Begin VB.TextBox Text5 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   7080
       TabIndex        =   6
@@ -82,6 +117,7 @@ Begin VB.Form Form10
       Width           =   3135
    End
    Begin VB.TextBox Text4 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   2160
       TabIndex        =   5
@@ -90,6 +126,7 @@ Begin VB.Form Form10
       Width           =   2775
    End
    Begin VB.TextBox Text3 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   2160
       TabIndex        =   4
@@ -98,7 +135,17 @@ Begin VB.Form Form10
       Width           =   2775
    End
    Begin VB.TextBox Text2 
+      Appearance      =   0  'Flat
       Enabled         =   0   'False
+      BeginProperty Font 
+         Name            =   "Arial Narrow"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
       Left            =   5280
       TabIndex        =   3
@@ -116,7 +163,17 @@ Begin VB.Form Form10
       Width           =   2895
    End
    Begin VB.TextBox Text1 
+      Appearance      =   0  'Flat
       Enabled         =   0   'False
+      BeginProperty Font 
+         Name            =   "Arial Narrow"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   495
       Left            =   5280
       TabIndex        =   1
@@ -125,15 +182,19 @@ Begin VB.Form Form10
       Width           =   5055
    End
    Begin VB.Label Label12 
-      Caption         =   "Label12"
+      BackColor       =   &H00000080&
+      Caption         =   "ESE MARKS"
+      ForeColor       =   &H8000000B&
       Height          =   495
-      Left            =   10800
+      Left            =   10560
       TabIndex        =   22
       Top             =   6480
-      Width           =   855
+      Width           =   1215
    End
    Begin VB.Label Label11 
-      Caption         =   "Label11"
+      BackColor       =   &H00000080&
+      Caption         =   "CT MARKS"
+      ForeColor       =   &H8000000B&
       Height          =   375
       Left            =   10800
       TabIndex        =   21
@@ -141,15 +202,19 @@ Begin VB.Form Form10
       Width           =   855
    End
    Begin VB.Label Label10 
-      Caption         =   "Label10"
+      BackColor       =   &H00000080&
+      Caption         =   "ESE MARKS"
+      ForeColor       =   &H00FFFFFF&
       Height          =   375
-      Left            =   5640
+      Left            =   5520
       TabIndex        =   20
       Top             =   6480
-      Width           =   1095
+      Width           =   1215
    End
    Begin VB.Label Label9 
-      Caption         =   "Label9"
+      BackColor       =   &H00000080&
+      Caption         =   "CT MARKS"
+      ForeColor       =   &H00FFFFFF&
       Height          =   375
       Left            =   5760
       TabIndex        =   19
@@ -157,15 +222,19 @@ Begin VB.Form Form10
       Width           =   975
    End
    Begin VB.Label Label8 
-      Caption         =   "Label8"
-      Height          =   375
-      Left            =   840
+      BackColor       =   &H00000080&
+      Caption         =   "ESE MARKS"
+      ForeColor       =   &H8000000B&
+      Height          =   495
+      Left            =   600
       TabIndex        =   18
-      Top             =   6720
-      Width           =   855
+      Top             =   6600
+      Width           =   1095
    End
    Begin VB.Label Label7 
-      Caption         =   "Label7"
+      BackColor       =   &H00000080&
+      Caption         =   "CT MARKS"
+      ForeColor       =   &H8000000B&
       Height          =   375
       Left            =   840
       TabIndex        =   17
@@ -173,7 +242,9 @@ Begin VB.Form Form10
       Width           =   975
    End
    Begin VB.Label Label6 
+      BackColor       =   &H00000080&
       Caption         =   "DIGITAL LOGIC AND DESIGN"
+      ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   12480
       TabIndex        =   16
@@ -181,7 +252,9 @@ Begin VB.Form Form10
       Width           =   1935
    End
    Begin VB.Label Label5 
+      BackColor       =   &H00000080&
       Caption         =   "LOGIC BUILDING IN C"
+      ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   7560
       TabIndex        =   15
@@ -189,7 +262,9 @@ Begin VB.Form Form10
       Width           =   2055
    End
    Begin VB.Label Label4 
+      BackColor       =   &H00000080&
       Caption         =   "COMPUTER FUNDAMENTALS"
+      ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   2520
       TabIndex        =   14
@@ -197,7 +272,9 @@ Begin VB.Form Form10
       Width           =   2055
    End
    Begin VB.Label Label3 
+      BackColor       =   &H00000080&
       Caption         =   "ROLL NUMBER"
+      ForeColor       =   &H8000000B&
       Height          =   375
       Left            =   3120
       TabIndex        =   13
@@ -205,7 +282,9 @@ Begin VB.Form Form10
       Width           =   1455
    End
    Begin VB.Label Label2 
+      BackColor       =   &H00000080&
       Caption         =   "NAME"
+      ForeColor       =   &H8000000B&
       Height          =   375
       Left            =   3120
       TabIndex        =   12
@@ -214,6 +293,7 @@ Begin VB.Form Form10
    End
    Begin VB.Label Label1 
       Alignment       =   2  'Center
+      BackColor       =   &H00000080&
       Caption         =   "ALLOCATE MARKS"
       BeginProperty Font 
          Name            =   "Arial Black"
@@ -224,6 +304,7 @@ Begin VB.Form Form10
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
+      ForeColor       =   &H8000000B&
       Height          =   735
       Left            =   4440
       TabIndex        =   0
@@ -271,6 +352,8 @@ display
 
 End Sub
 Sub display()
+Dim i As String
+
 Text1.Text = rs!student_name
 Text2.Text = rs!roll_no
 Text3.Text = rs!ct_sub1
@@ -279,6 +362,12 @@ Text5.Text = rs!ct_sub2
 Text6.Text = rs!ese_sub2
 Text7.Text = rs!ct_sub3
 Text8.Text = rs!ese_sub3
+If rs!photo <> Null Then
+Picture1.Picture = LoadPicture(rs!photo)
+End If
+
+Picture1.Picture = LoadPicture(i)
+
 
 
 End Sub
@@ -297,6 +386,12 @@ End Sub
 Private Sub Command5_Click()
 rs.MoveFirst
 display
+End Sub
+
+Private Sub Command6_Click()
+Form2.Show
+Unload Me
+
 End Sub
 
 Private Sub Form_Load()
@@ -325,3 +420,4 @@ End If
 
 
 End Sub
+

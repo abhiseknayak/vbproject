@@ -12,6 +12,25 @@ Begin VB.Form Form5
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
+   Begin VB.CommandButton Command3 
+      BackColor       =   &H00FFFF00&
+      Caption         =   "BACK"
+      BeginProperty Font 
+         Name            =   "Arial Narrow"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   735
+      Left            =   8760
+      Style           =   1  'Graphical
+      TabIndex        =   7
+      Top             =   6840
+      Width           =   1695
+   End
    Begin MSAdodcLib.Adodc logstu 
       Height          =   495
       Left            =   6600
@@ -102,8 +121,19 @@ Begin VB.Form Form5
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
       BackColor       =   &H00FFFFFF&
+      BeginProperty Font 
+         Name            =   "Arial Narrow"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   735
+      IMEMode         =   3  'DISABLE
       Left            =   6600
+      PasswordChar    =   "*"
       TabIndex        =   2
       Text            =   "Text2"
       Top             =   4200
@@ -113,6 +143,15 @@ Begin VB.Form Form5
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
       BackColor       =   &H00FFFFFF&
+      BeginProperty Font 
+         Name            =   "Arial Narrow"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   735
       Left            =   6600
       TabIndex        =   1
@@ -124,8 +163,8 @@ Begin VB.Form Form5
       BackColor       =   &H00000080&
       Caption         =   "Enter Password:"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Arial Narrow"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -143,8 +182,8 @@ Begin VB.Form Form5
       BackColor       =   &H00000080&
       Caption         =   "Enter Username:"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Arial Narrow"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -163,20 +202,20 @@ Begin VB.Form Form5
       BackColor       =   &H00000080&
       Caption         =   "WELCOME TO STUDENT LOGIN"
       BeginProperty Font 
-         Name            =   "Monotype Corsiva"
+         Name            =   "Arial Black"
          Size            =   20.25
          Charset         =   0
-         Weight          =   700
+         Weight          =   900
          Underline       =   0   'False
-         Italic          =   -1  'True
+         Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H8000000B&
       Height          =   615
-      Left            =   6360
+      Left            =   5520
       TabIndex        =   0
-      Top             =   240
-      Width           =   5535
+      Top             =   480
+      Width           =   7455
    End
 End
 Attribute VB_Name = "Form5"
@@ -211,3 +250,8 @@ Unload Me
 
 End Sub
 
+Private Sub Command3_Click()
+Form1.Show
+Unload Me
+
+End Sub

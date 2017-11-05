@@ -12,6 +12,15 @@ Begin VB.Form Form8
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
+   Begin VB.PictureBox Picture1 
+      Height          =   2655
+      Left            =   1080
+      ScaleHeight     =   2595
+      ScaleWidth      =   2715
+      TabIndex        =   17
+      Top             =   2160
+      Width           =   2775
+   End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   615
       Left            =   12720
@@ -79,7 +88,7 @@ Begin VB.Form Form8
    End
    Begin VB.CommandButton Command2 
       BackColor       =   &H0000FF00&
-      Caption         =   "MESSAGES"
+      Caption         =   "UPDATE INFO"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -113,46 +122,6 @@ Begin VB.Form Form8
       Style           =   1  'Graphical
       TabIndex        =   2
       Top             =   1200
-      Width           =   1575
-   End
-   Begin VB.Label Label16 
-      Alignment       =   2  'Center
-      BackColor       =   &H00000080&
-      Caption         =   "Label16"
-      BeginProperty Font 
-         Name            =   "Arial Narrow"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H8000000B&
-      Height          =   615
-      Left            =   7920
-      TabIndex        =   18
-      Top             =   7680
-      Width           =   3615
-   End
-   Begin VB.Label Label15 
-      Alignment       =   2  'Center
-      BackColor       =   &H00000080&
-      Caption         =   "Label15"
-      BeginProperty Font 
-         Name            =   "Arial Narrow"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H8000000B&
-      Height          =   495
-      Left            =   5760
-      TabIndex        =   17
-      Top             =   7800
       Width           =   1575
    End
    Begin VB.Label Label14 
@@ -470,8 +439,19 @@ Unload Me
 End Sub
 
 Private Sub Form_Load()
+Dim str As String
+
 Adodc1.RecordSource = "select * from STUDENT1 where username='" + Form5.imp2_name + "'"
 Adodc1.Refresh
+str = Adodc1.Recordset.Fields("photo")
+
+Picture1.Picture = LoadPicture(str)
+
+
+
+
+
+
 
 If Adodc1.Recordset.EOF Then
 MsgBox "not found"
@@ -480,3 +460,4 @@ user_imp = Label8.Caption
 
 
 End Sub
+

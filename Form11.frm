@@ -1,5 +1,6 @@
 VERSION 5.00
 Begin VB.Form Form11 
+   BackColor       =   &H00000080&
    Caption         =   "Form11"
    ClientHeight    =   3015
    ClientLeft      =   120
@@ -9,7 +10,27 @@ Begin VB.Form Form11
    ScaleHeight     =   3015
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Command1 
+      Caption         =   "BACK"
+      BeginProperty Font 
+         Name            =   "Arial Narrow"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Left            =   12960
+      MaskColor       =   &H00000080&
+      Style           =   1  'Graphical
+      TabIndex        =   18
+      Top             =   7800
+      Width           =   2055
+   End
    Begin VB.TextBox Text7 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   3600
       TabIndex        =   7
@@ -18,6 +39,7 @@ Begin VB.Form Form11
       Width           =   2775
    End
    Begin VB.TextBox Text6 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   13320
       TabIndex        =   6
@@ -26,6 +48,7 @@ Begin VB.Form Form11
       Width           =   2655
    End
    Begin VB.TextBox Text5 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   13320
       TabIndex        =   5
@@ -34,6 +57,7 @@ Begin VB.Form Form11
       Width           =   2655
    End
    Begin VB.TextBox Text4 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   8400
       TabIndex        =   4
@@ -42,6 +66,7 @@ Begin VB.Form Form11
       Width           =   2775
    End
    Begin VB.TextBox Text3 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   8400
       TabIndex        =   3
@@ -50,6 +75,7 @@ Begin VB.Form Form11
       Width           =   2775
    End
    Begin VB.TextBox Text2 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   3600
       TabIndex        =   2
@@ -58,6 +84,7 @@ Begin VB.Form Form11
       Width           =   2535
    End
    Begin VB.TextBox Text1 
+      Appearance      =   0  'Flat
       Height          =   615
       Left            =   3600
       TabIndex        =   1
@@ -66,7 +93,9 @@ Begin VB.Form Form11
       Width           =   2535
    End
    Begin VB.Label Label11 
+      BackColor       =   &H00000080&
       Caption         =   "YOUR GP"
+      ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   1920
       TabIndex        =   17
@@ -74,7 +103,9 @@ Begin VB.Form Form11
       Width           =   1215
    End
    Begin VB.Label Label10 
+      BackColor       =   &H00000080&
       Caption         =   "END SEMESTER"
+      ForeColor       =   &H8000000B&
       Height          =   375
       Left            =   11760
       TabIndex        =   16
@@ -82,7 +113,9 @@ Begin VB.Form Form11
       Width           =   1095
    End
    Begin VB.Label Label9 
+      BackColor       =   &H00000080&
       Caption         =   "CLASS TEST"
+      ForeColor       =   &H00FFFFFF&
       Height          =   375
       Left            =   11760
       TabIndex        =   15
@@ -90,7 +123,9 @@ Begin VB.Form Form11
       Width           =   1215
    End
    Begin VB.Label Label8 
+      BackColor       =   &H00000080&
       Caption         =   "END SEMESTER"
+      ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   6840
       TabIndex        =   14
@@ -98,7 +133,9 @@ Begin VB.Form Form11
       Width           =   1215
    End
    Begin VB.Label Label7 
+      BackColor       =   &H00000080&
       Caption         =   "CLASS TEST"
+      ForeColor       =   &H8000000B&
       Height          =   375
       Left            =   6840
       TabIndex        =   13
@@ -106,23 +143,29 @@ Begin VB.Form Form11
       Width           =   975
    End
    Begin VB.Label Label6 
+      BackColor       =   &H00000080&
       Caption         =   "END SEMESTER"
+      ForeColor       =   &H8000000B&
       Height          =   375
-      Left            =   1920
+      Left            =   1800
       TabIndex        =   12
       Top             =   4200
-      Width           =   975
+      Width           =   1215
    End
    Begin VB.Label Label5 
+      BackColor       =   &H00000080&
       Caption         =   "CLASS TEST"
+      ForeColor       =   &H8000000B&
       Height          =   375
-      Left            =   1920
+      Left            =   1800
       TabIndex        =   11
       Top             =   3240
-      Width           =   975
+      Width           =   1095
    End
    Begin VB.Label Label4 
+      BackColor       =   &H00000080&
       Caption         =   "DIGTAL LOGIC AND DESIGN"
+      ForeColor       =   &H8000000B&
       Height          =   615
       Left            =   13440
       TabIndex        =   10
@@ -130,7 +173,9 @@ Begin VB.Form Form11
       Width           =   2295
    End
    Begin VB.Label Label3 
+      BackColor       =   &H00000080&
       Caption         =   "LOGIC BUILDING USING C"
+      ForeColor       =   &H8000000B&
       Height          =   615
       Left            =   8400
       TabIndex        =   9
@@ -138,7 +183,9 @@ Begin VB.Form Form11
       Width           =   2175
    End
    Begin VB.Label Label2 
+      BackColor       =   &H00000080&
       Caption         =   "COMPUTER FUNDAMENTALS"
+      ForeColor       =   &H8000000B&
       Height          =   615
       Left            =   3720
       TabIndex        =   8
@@ -147,6 +194,7 @@ Begin VB.Form Form11
    End
    Begin VB.Label Label1 
       Alignment       =   2  'Center
+      BackColor       =   &H00000080&
       Caption         =   "YOUR MARKS"
       BeginProperty Font 
          Name            =   "Arial"
@@ -157,6 +205,7 @@ Begin VB.Form Form11
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
+      ForeColor       =   &H8000000B&
       Height          =   855
       Left            =   7920
       TabIndex        =   0

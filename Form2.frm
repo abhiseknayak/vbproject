@@ -12,6 +12,15 @@ Begin VB.Form Form2
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
+   Begin VB.PictureBox Picture1 
+      Height          =   2295
+      Left            =   8520
+      ScaleHeight     =   2235
+      ScaleWidth      =   2355
+      TabIndex        =   16
+      Top             =   2520
+      Width           =   2415
+   End
    Begin VB.CommandButton Command3 
       BackColor       =   &H000000FF&
       Caption         =   "LOGOUT"
@@ -33,7 +42,7 @@ Begin VB.Form Form2
    End
    Begin VB.CommandButton Command2 
       BackColor       =   &H0000FF00&
-      Caption         =   "MESSAGES"
+      Caption         =   "UPDATE INFO"
       BeginProperty Font 
          Name            =   "Arial Narrow"
          Size            =   9.75
@@ -403,15 +412,25 @@ Unload Me
 
 End Sub
 
+
 Private Sub Form_Load()
+Dim str As String
+
 Adodc1.RecordSource = "select * from TEACHER where username='" + Form3.imp_name + "'"
 Adodc1.Refresh
+str = Adodc1.Recordset.Fields("photo").Value
+Picture1.Picture = LoadPicture(str)
+
+
+
+
 
 
 If Adodc1.Recordset.EOF Then
 MsgBox "not found"
 End If
 sub_imp = Label9.Caption
+
 
 End Sub
 
