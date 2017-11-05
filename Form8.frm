@@ -454,6 +454,14 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Public user_imp As String
+
+Private Sub Command1_Click()
+Form11.Show
+Unload Me
+
+End Sub
+
 Private Sub Command3_Click()
 Form9.Show
 MsgBox "LOGOUT SUCCESSFULL"
@@ -468,5 +476,7 @@ Adodc1.Refresh
 If Adodc1.Recordset.EOF Then
 MsgBox "not found"
 End If
+user_imp = Label8.Caption
+
 
 End Sub

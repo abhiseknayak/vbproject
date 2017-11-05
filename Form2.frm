@@ -381,7 +381,18 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Public sub_imp As String
 
+
+
+
+
+
+Private Sub Command1_Click()
+Form10.Show
+Unload Me
+
+End Sub
 
 Private Sub Command3_Click()
 
@@ -400,5 +411,7 @@ Adodc1.Refresh
 If Adodc1.Recordset.EOF Then
 MsgBox "not found"
 End If
+sub_imp = Label9.Caption
+
 End Sub
 
