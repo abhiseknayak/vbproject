@@ -1,6 +1,5 @@
 VERSION 5.00
 Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form Form7 
    BackColor       =   &H00000080&
    Caption         =   "Form7"
@@ -13,41 +12,6 @@ Begin VB.Form Form7
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
-   Begin MSComDlg.CommonDialog CommonDialog1 
-      Left            =   2280
-      Top             =   6000
-      _ExtentX        =   847
-      _ExtentY        =   847
-      _Version        =   393216
-   End
-   Begin VB.CommandButton Command3 
-      BackColor       =   &H00FFFF00&
-      Caption         =   "UPLOAD"
-      BeginProperty Font 
-         Name            =   "Arial Narrow"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   495
-      Left            =   1440
-      Style           =   1  'Graphical
-      TabIndex        =   17
-      Top             =   5160
-      Width           =   2295
-   End
-   Begin VB.PictureBox Picture1 
-      Height          =   2895
-      Left            =   1200
-      ScaleHeight     =   2835
-      ScaleWidth      =   2835
-      TabIndex        =   16
-      Top             =   1680
-      Width           =   2895
-   End
    Begin VB.OptionButton Option2 
       BackColor       =   &H00000080&
       Caption         =   "FEMALE"
@@ -363,7 +327,7 @@ End If
 
 Adodc1.Recordset.Fields("phone_number") = Text5.Text
 Adodc1.Recordset.Fields("address") = Text6.Text
-Adodc1.Recordset.Fields("photo").Value = CommonDialog1.FileName
+
 
 
 
@@ -371,9 +335,7 @@ If Text1.Text = "" Then
 MsgBox "NAME FIELD CANNOT BE EMPTY", vbCritical
 ElseIf Text2.Text = "" Then
 MsgBox "USER NAME FIELD CANNOT BE EMPTY", vbCritical
-ElseIf Not Picture1.Picture Then
 
-MsgBox "PLEASE UPLOAD A PICTURE"
 
 
 ElseIf Text3.Text = "" Then
@@ -397,14 +359,7 @@ Form1.Show
 Unload Me
 
 End Sub
-Private Sub Command3_Click()
-Dim str As String
-CommonDialog1.ShowOpen
-CommonDialog1.Filter = "jpeg|*.jpg"
-str = CommonDialog1.FileName
-Picture1.Picture = LoadPicture(str)
 
-End Sub
 
 Private Sub Form_Load()
 Adodc1.Recordset.AddNew

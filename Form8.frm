@@ -12,15 +12,6 @@ Begin VB.Form Form8
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
-   Begin VB.PictureBox Picture1 
-      Height          =   2655
-      Left            =   1080
-      ScaleHeight     =   2595
-      ScaleWidth      =   2715
-      TabIndex        =   17
-      Top             =   2160
-      Width           =   2775
-   End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   615
       Left            =   12720
@@ -439,13 +430,11 @@ Unload Me
 End Sub
 
 Private Sub Form_Load()
-Dim str As String
+
 
 Adodc1.RecordSource = "select * from STUDENT1 where username='" + Form5.imp2_name + "'"
 Adodc1.Refresh
-str = Adodc1.Recordset.Fields("photo")
 
-Picture1.Picture = LoadPicture(str)
 
 
 

@@ -414,12 +414,11 @@ End Sub
 
 
 Private Sub Form_Load()
-Dim str As String
+
 
 Adodc1.RecordSource = "select * from TEACHER where username='" + Form3.imp_name + "'"
 Adodc1.Refresh
-str = Adodc1.Recordset.Fields("photo").Value
-Picture1.Picture = LoadPicture(str)
+
 
 
 

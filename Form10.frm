@@ -352,7 +352,7 @@ display
 
 End Sub
 Sub display()
-Dim i As String
+
 
 Text1.Text = rs!student_name
 Text2.Text = rs!roll_no
@@ -362,14 +362,6 @@ Text5.Text = rs!ct_sub2
 Text6.Text = rs!ese_sub2
 Text7.Text = rs!ct_sub3
 Text8.Text = rs!ese_sub3
-If rs!photo <> Null Then
-Picture1.Picture = LoadPicture(rs!photo)
-End If
-
-Picture1.Picture = LoadPicture(i)
-
-
-
 End Sub
 
 Private Sub Command4_Click()
