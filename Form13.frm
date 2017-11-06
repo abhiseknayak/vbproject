@@ -9,8 +9,8 @@ Begin VB.Form Form13
    ClientTop       =   465
    ClientWidth     =   4560
    LinkTopic       =   "Form13"
-   ScaleHeight     =   10935
-   ScaleWidth      =   20250
+   ScaleHeight     =   3015
+   ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton Command1 
       BackColor       =   &H00FFFF00&

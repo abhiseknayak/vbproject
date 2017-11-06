@@ -26,7 +26,7 @@ Begin VB.Form Form10
       Height          =   615
       Left            =   16440
       Style           =   1  'Graphical
-      TabIndex        =   26
+      TabIndex        =   25
       Top             =   1920
       Width           =   2055
    End
@@ -36,7 +36,7 @@ Begin VB.Form Form10
       Height          =   615
       Left            =   13680
       Style           =   1  'Graphical
-      TabIndex        =   25
+      TabIndex        =   24
       Top             =   8040
       Width           =   2295
    End
@@ -46,7 +46,7 @@ Begin VB.Form Form10
       Height          =   615
       Left            =   1680
       Style           =   1  'Graphical
-      TabIndex        =   24
+      TabIndex        =   23
       Top             =   8040
       Width           =   2175
    End
@@ -56,7 +56,7 @@ Begin VB.Form Form10
       Height          =   615
       Left            =   7920
       Style           =   1  'Graphical
-      TabIndex        =   23
+      TabIndex        =   22
       Top             =   8040
       Width           =   2175
    End
@@ -66,7 +66,7 @@ Begin VB.Form Form10
       Height          =   615
       Left            =   10800
       Style           =   1  'Graphical
-      TabIndex        =   11
+      TabIndex        =   10
       Top             =   8040
       Width           =   2055
    End
@@ -76,7 +76,7 @@ Begin VB.Form Form10
       Height          =   615
       Left            =   4800
       Style           =   1  'Graphical
-      TabIndex        =   10
+      TabIndex        =   9
       Top             =   8040
       Width           =   2295
    End
@@ -84,7 +84,7 @@ Begin VB.Form Form10
       Appearance      =   0  'Flat
       Height          =   615
       Left            =   12000
-      TabIndex        =   9
+      TabIndex        =   8
       Text            =   "Text8"
       Top             =   6360
       Width           =   3255
@@ -93,7 +93,7 @@ Begin VB.Form Form10
       Appearance      =   0  'Flat
       Height          =   615
       Left            =   12000
-      TabIndex        =   8
+      TabIndex        =   7
       Text            =   "Text7"
       Top             =   5280
       Width           =   3135
@@ -102,7 +102,7 @@ Begin VB.Form Form10
       Appearance      =   0  'Flat
       Height          =   615
       Left            =   7080
-      TabIndex        =   7
+      TabIndex        =   6
       Text            =   "Text6"
       Top             =   6360
       Width           =   3135
@@ -111,7 +111,7 @@ Begin VB.Form Form10
       Appearance      =   0  'Flat
       Height          =   615
       Left            =   7080
-      TabIndex        =   6
+      TabIndex        =   5
       Text            =   "Text5"
       Top             =   5280
       Width           =   3135
@@ -120,7 +120,7 @@ Begin VB.Form Form10
       Appearance      =   0  'Flat
       Height          =   615
       Left            =   2160
-      TabIndex        =   5
+      TabIndex        =   4
       Text            =   "Text4"
       Top             =   6480
       Width           =   2775
@@ -129,7 +129,7 @@ Begin VB.Form Form10
       Appearance      =   0  'Flat
       Height          =   615
       Left            =   2160
-      TabIndex        =   4
+      TabIndex        =   3
       Text            =   "Text3"
       Top             =   5280
       Width           =   2775
@@ -148,19 +148,10 @@ Begin VB.Form Form10
       EndProperty
       Height          =   495
       Left            =   5280
-      TabIndex        =   3
+      TabIndex        =   2
       Text            =   "Text2"
       Top             =   2520
       Width           =   5055
-   End
-   Begin VB.PictureBox Picture1 
-      Height          =   2655
-      Left            =   12720
-      ScaleHeight     =   2595
-      ScaleWidth      =   2835
-      TabIndex        =   2
-      Top             =   1320
-      Width           =   2895
    End
    Begin VB.TextBox Text1 
       Appearance      =   0  'Flat
@@ -187,7 +178,7 @@ Begin VB.Form Form10
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   10560
-      TabIndex        =   22
+      TabIndex        =   21
       Top             =   6480
       Width           =   1215
    End
@@ -197,7 +188,7 @@ Begin VB.Form Form10
       ForeColor       =   &H8000000B&
       Height          =   375
       Left            =   10800
-      TabIndex        =   21
+      TabIndex        =   20
       Top             =   5400
       Width           =   855
    End
@@ -207,7 +198,7 @@ Begin VB.Form Form10
       ForeColor       =   &H00FFFFFF&
       Height          =   375
       Left            =   5520
-      TabIndex        =   20
+      TabIndex        =   19
       Top             =   6480
       Width           =   1215
    End
@@ -217,7 +208,7 @@ Begin VB.Form Form10
       ForeColor       =   &H00FFFFFF&
       Height          =   375
       Left            =   5760
-      TabIndex        =   19
+      TabIndex        =   18
       Top             =   5520
       Width           =   975
    End
@@ -227,7 +218,7 @@ Begin VB.Form Form10
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   600
-      TabIndex        =   18
+      TabIndex        =   17
       Top             =   6600
       Width           =   1095
    End
@@ -237,7 +228,7 @@ Begin VB.Form Form10
       ForeColor       =   &H8000000B&
       Height          =   375
       Left            =   840
-      TabIndex        =   17
+      TabIndex        =   16
       Top             =   5400
       Width           =   975
    End
@@ -247,7 +238,7 @@ Begin VB.Form Form10
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   12480
-      TabIndex        =   16
+      TabIndex        =   15
       Top             =   4440
       Width           =   1935
    End
@@ -257,7 +248,7 @@ Begin VB.Form Form10
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   7560
-      TabIndex        =   15
+      TabIndex        =   14
       Top             =   4440
       Width           =   2055
    End
@@ -267,7 +258,7 @@ Begin VB.Form Form10
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   2520
-      TabIndex        =   14
+      TabIndex        =   13
       Top             =   4440
       Width           =   2055
    End
@@ -277,7 +268,7 @@ Begin VB.Form Form10
       ForeColor       =   &H8000000B&
       Height          =   375
       Left            =   3120
-      TabIndex        =   13
+      TabIndex        =   12
       Top             =   2640
       Width           =   1455
    End
@@ -287,7 +278,7 @@ Begin VB.Form Form10
       ForeColor       =   &H8000000B&
       Height          =   375
       Left            =   3120
-      TabIndex        =   12
+      TabIndex        =   11
       Top             =   1800
       Width           =   1335
    End

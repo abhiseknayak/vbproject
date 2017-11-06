@@ -12,15 +12,6 @@ Begin VB.Form Form2
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
-   Begin VB.PictureBox Picture1 
-      Height          =   2295
-      Left            =   8520
-      ScaleHeight     =   2235
-      ScaleWidth      =   2355
-      TabIndex        =   16
-      Top             =   2520
-      Width           =   2415
-   End
    Begin VB.CommandButton Command3 
       BackColor       =   &H000000FF&
       Caption         =   "LOGOUT"
@@ -211,7 +202,7 @@ Begin VB.Form Form2
    Begin VB.Label Label10 
       BackColor       =   &H00000080&
       Caption         =   "Label10"
-      DataField       =   "phone number"
+      DataField       =   "phone_number"
       DataSource      =   "Adodc1"
       BeginProperty Font 
          Name            =   "Arial Narrow"
