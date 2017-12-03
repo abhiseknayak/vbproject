@@ -8,8 +8,8 @@ Begin VB.Form Form3
    ClientTop       =   465
    ClientWidth     =   4560
    LinkTopic       =   "Form3"
-   ScaleHeight     =   10935
-   ScaleWidth      =   20250
+   ScaleHeight     =   3015
+   ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
    Begin VB.CommandButton Command3 
@@ -35,6 +35,7 @@ Begin VB.Form Form3
       Height          =   375
       Left            =   9240
       Top             =   8160
+      Visible         =   0   'False
       Width           =   2415
       _ExtentX        =   4260
       _ExtentY        =   661

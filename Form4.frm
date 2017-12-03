@@ -8,8 +8,8 @@ Begin VB.Form Form4
    ClientTop       =   465
    ClientWidth     =   4560
    LinkTopic       =   "Form4"
-   ScaleHeight     =   10935
-   ScaleWidth      =   20250
+   ScaleHeight     =   3015
+   ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
    Begin VB.ComboBox Combo1 
@@ -28,6 +28,7 @@ Begin VB.Form Form4
       Height          =   495
       Left            =   11880
       Top             =   9120
+      Visible         =   0   'False
       Width           =   2175
       _ExtentX        =   3836
       _ExtentY        =   873
@@ -101,7 +102,7 @@ Begin VB.Form Form4
       Width           =   6495
    End
    Begin VB.TextBox txtphone 
-      DataField       =   "phone number"
+      DataField       =   "phone_number"
       DataSource      =   "Adodc1"
       Height          =   615
       Left            =   7200
@@ -274,7 +275,7 @@ Adodc1.Recordset.Fields("username") = txtusername.Text
 Adodc1.Recordset.Fields("password") = txtpassword.Text
 Adodc1.Recordset.Fields("subject_alloted") = Combo1.Text
 Adodc1.Recordset.Fields("qualification") = txtqual.Text
-Adodc1.Recordset.Fields("phone number") = txtphone.Text
+Adodc1.Recordset.Fields("phone_number") = txtphone.Text
 Adodc1.Recordset.Fields("address") = txtaddress.Text
 
 

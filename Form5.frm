@@ -8,8 +8,8 @@ Begin VB.Form Form5
    ClientTop       =   465
    ClientWidth     =   4560
    LinkTopic       =   "Form5"
-   ScaleHeight     =   10935
-   ScaleWidth      =   20250
+   ScaleHeight     =   3015
+   ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
    Begin VB.CommandButton Command3 
@@ -35,6 +35,7 @@ Begin VB.Form Form5
       Height          =   495
       Left            =   6600
       Top             =   7800
+      Visible         =   0   'False
       Width           =   2415
       _ExtentX        =   4260
       _ExtentY        =   873
@@ -253,5 +254,15 @@ End Sub
 Private Sub Command3_Click()
 Form1.Show
 Unload Me
+
+End Sub
+
+Private Sub Text1_Click()
+Text1.Text = ""
+
+End Sub
+
+Private Sub Text2_Click()
+Text2.Text = ""
 
 End Sub

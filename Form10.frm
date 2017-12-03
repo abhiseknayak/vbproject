@@ -319,8 +319,25 @@ rs.Fields("ct_sub3") = Val(Text7.Text)
 rs.Fields("ese_sub1") = Val(Text4.Text)
 rs.Fields("ese_sub2") = Val(Text6.Text)
 rs.Fields("ese_sub3") = Val(Text8.Text)
-MsgBox "records updated"
+
+If IsNumeric(Text3.Text) And IsNumeric(Text4.Text) And IsNumeric(Text5.Text) And IsNumeric(Text6.Text) And IsNumeric(Text7.Text) And IsNumeric(Text8.Text) Then
+If Val(Text3.Text) > 30 Or Val(Text3.Text) < 0 Or Val(Text4.Text) > 70 Or Val(Text4.Text) < 0 Or Val(Text5.Text) > 30 Or Val(Text5.Text) < 0 Or Val(Text6.Text) > 70 Or Val(Text6.Text) < 0 Or Val(Text7.Text) > 30 Or Val(Text7.Text) < 0 Or Val(Text8.Text) > 70 Or Val(Text8.Text) < 0 Then
+
+MsgBox "THE MARKS ENTERED ARE NOT VALID"
+Else
 rs.Update
+MsgBox "records updated"
+End If
+
+Else
+MsgBox "MARKS ENTERED ARE NOT NUMERIC"
+
+End If
+
+
+
+
+
 
 
 End Sub
@@ -372,8 +389,9 @@ display
 End Sub
 
 Private Sub Command6_Click()
-Form2.Show
 Unload Me
+Form2.Show
+
 
 End Sub
 

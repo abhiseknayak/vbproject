@@ -12,6 +12,7 @@ Begin VB.Form Form13
    ScaleHeight     =   3015
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
+   WindowState     =   2  'Maximized
    Begin VB.CommandButton Command1 
       BackColor       =   &H00FFFF00&
       Caption         =   "BACK"
@@ -35,6 +36,7 @@ Begin VB.Form Form13
       Height          =   615
       Left            =   8760
       Top             =   7440
+      Visible         =   0   'False
       Width           =   2415
       _ExtentX        =   4260
       _ExtentY        =   1085

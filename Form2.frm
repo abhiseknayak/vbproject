@@ -25,30 +25,11 @@ Begin VB.Form Form2
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   17160
-      Style           =   1  'Graphical
-      TabIndex        =   15
-      Top             =   1440
-      Width           =   1695
-   End
-   Begin VB.CommandButton Command2 
-      BackColor       =   &H0000FF00&
-      Caption         =   "UPDATE INFO"
-      BeginProperty Font 
-         Name            =   "Arial Narrow"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   495
-      Left            =   15120
+      Left            =   16680
       Style           =   1  'Graphical
       TabIndex        =   14
       Top             =   1440
-      Width           =   1695
+      Width           =   2175
    End
    Begin VB.CommandButton Command1 
       BackColor       =   &H0000FFFF&
@@ -67,12 +48,13 @@ Begin VB.Form Form2
       Style           =   1  'Graphical
       TabIndex        =   13
       Top             =   1440
-      Width           =   1935
+      Width           =   2535
    End
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   495
       Left            =   3120
       Top             =   7560
+      Visible         =   0   'False
       Width           =   3135
       _ExtentX        =   5530
       _ExtentY        =   873
@@ -389,8 +371,9 @@ Public sub_imp As String
 
 
 Private Sub Command1_Click()
-Form10.Show
 Unload Me
+Form10.Show
+
 
 End Sub
 

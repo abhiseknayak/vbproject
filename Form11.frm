@@ -10,7 +10,9 @@ Begin VB.Form Form11
    ScaleHeight     =   3015
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
+   WindowState     =   2  'Maximized
    Begin VB.CommandButton Command1 
+      BackColor       =   &H00FFFF00&
       Caption         =   "BACK"
       BeginProperty Font 
          Name            =   "Arial Narrow"
@@ -222,6 +224,12 @@ Dim con1 As New ADODB.Connection
 Dim rs1 As New ADODB.Recordset
 
 
+
+Private Sub Command1_Click()
+Form8.Show
+Unload Me
+
+End Sub
 
 Private Sub Form_Load()
 con1.Open "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\abhisek\Desktop\VB6 project\Database2.mdb;Persist Security Info=False"

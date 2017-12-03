@@ -8,14 +8,15 @@ Begin VB.Form Form8
    ClientTop       =   465
    ClientWidth     =   4560
    LinkTopic       =   "Form8"
-   ScaleHeight     =   10935
-   ScaleWidth      =   20250
+   ScaleHeight     =   3015
+   ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
    Begin MSAdodcLib.Adodc Adodc1 
       Height          =   615
       Left            =   12720
       Top             =   4200
+      Visible         =   0   'False
       Width           =   1935
       _ExtentX        =   3413
       _ExtentY        =   1085
@@ -70,31 +71,12 @@ Begin VB.Form Form8
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   495
-      Left            =   15600
-      Style           =   1  'Graphical
-      TabIndex        =   4
-      Top             =   1200
-      Width           =   1575
-   End
-   Begin VB.CommandButton Command2 
-      BackColor       =   &H0000FF00&
-      Caption         =   "UPDATE INFO"
-      BeginProperty Font 
-         Name            =   "Arial Narrow"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   495
-      Left            =   13800
+      Height          =   615
+      Left            =   15240
       Style           =   1  'Graphical
       TabIndex        =   3
       Top             =   1200
-      Width           =   1575
+      Width           =   1935
    End
    Begin VB.CommandButton Command1 
       BackColor       =   &H0000FFFF&
@@ -108,12 +90,12 @@ Begin VB.Form Form8
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   495
+      Height          =   615
       Left            =   12000
       Style           =   1  'Graphical
       TabIndex        =   2
       Top             =   1200
-      Width           =   1575
+      Width           =   2055
    End
    Begin VB.Label Label14 
       Alignment       =   2  'Center
@@ -133,7 +115,7 @@ Begin VB.Form Form8
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   7920
-      TabIndex        =   16
+      TabIndex        =   15
       Top             =   6840
       Width           =   3615
    End
@@ -153,7 +135,7 @@ Begin VB.Form Form8
       ForeColor       =   &H8000000B&
       Height          =   615
       Left            =   5760
-      TabIndex        =   15
+      TabIndex        =   14
       Top             =   6840
       Width           =   1575
    End
@@ -175,7 +157,7 @@ Begin VB.Form Form8
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   7920
-      TabIndex        =   14
+      TabIndex        =   13
       Top             =   6000
       Width           =   3615
    End
@@ -195,7 +177,7 @@ Begin VB.Form Form8
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   5760
-      TabIndex        =   13
+      TabIndex        =   12
       Top             =   6000
       Width           =   1575
    End
@@ -217,7 +199,7 @@ Begin VB.Form Form8
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   7920
-      TabIndex        =   12
+      TabIndex        =   11
       Top             =   5160
       Width           =   3615
    End
@@ -237,7 +219,7 @@ Begin VB.Form Form8
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   5760
-      TabIndex        =   11
+      TabIndex        =   10
       Top             =   5160
       Width           =   1575
    End
@@ -259,7 +241,7 @@ Begin VB.Form Form8
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   7920
-      TabIndex        =   10
+      TabIndex        =   9
       Top             =   4200
       Width           =   3615
    End
@@ -279,7 +261,7 @@ Begin VB.Form Form8
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   5760
-      TabIndex        =   9
+      TabIndex        =   8
       Top             =   4200
       Width           =   1575
    End
@@ -301,7 +283,7 @@ Begin VB.Form Form8
       ForeColor       =   &H00FFFFFF&
       Height          =   615
       Left            =   7920
-      TabIndex        =   8
+      TabIndex        =   7
       Top             =   3360
       Width           =   3615
    End
@@ -321,7 +303,7 @@ Begin VB.Form Form8
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   5760
-      TabIndex        =   7
+      TabIndex        =   6
       Top             =   3360
       Width           =   1575
    End
@@ -343,7 +325,7 @@ Begin VB.Form Form8
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   7920
-      TabIndex        =   6
+      TabIndex        =   5
       Top             =   2400
       Width           =   3615
    End
@@ -363,7 +345,7 @@ Begin VB.Form Form8
       ForeColor       =   &H8000000B&
       Height          =   495
       Left            =   5760
-      TabIndex        =   5
+      TabIndex        =   4
       Top             =   2400
       Width           =   1575
    End

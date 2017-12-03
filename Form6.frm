@@ -16,8 +16,8 @@ Begin VB.Form Form6
       Strikethrough   =   0   'False
    EndProperty
    LinkTopic       =   "Form6"
-   ScaleHeight     =   10935
-   ScaleWidth      =   20250
+   ScaleHeight     =   3015
+   ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
    Begin VB.CommandButton Command1 
@@ -34,7 +34,9 @@ Begin VB.Form Form6
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
       Height          =   615
+      IMEMode         =   3  'DISABLE
       Left            =   6240
+      PasswordChar    =   "*"
       TabIndex        =   3
       Text            =   "Text1"
       Top             =   4200

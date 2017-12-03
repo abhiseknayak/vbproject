@@ -8,8 +8,8 @@ Begin VB.Form Form7
    ClientTop       =   465
    ClientWidth     =   4560
    LinkTopic       =   "Form7"
-   ScaleHeight     =   10935
-   ScaleWidth      =   20250
+   ScaleHeight     =   3015
+   ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
    Begin VB.OptionButton Option2 
@@ -54,6 +54,7 @@ Begin VB.Form Form7
       Height          =   375
       Left            =   15600
       Top             =   8760
+      Visible         =   0   'False
       Width           =   2295
       _ExtentX        =   4048
       _ExtentY        =   661
